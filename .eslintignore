@@ -1,0 +1,6 @@
+gulpfile.js
+dist
+plugins
+package.json
+tsconfig.json
+ftp_settings.json
