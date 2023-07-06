@@ -62,8 +62,9 @@
     <path d="M20.6667 23.25V25.8334C20.6667 26.5185 20.3945 27.1756 19.91 27.66C19.4256 28.1445 18.7685 28.4167 18.0834 28.4167H7.75002C7.06488 28.4167 6.4078 28.1445 5.92333 27.66C5.43886 27.1756 5.16669 26.5185 5.16669 25.8334V11.625C5.16669 10.9399 5.43886 10.2828 5.92333 9.79833C6.4078 9.31386 7.06488 9.04169 7.75002 9.04169H10.3334" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
 
-<!-- <svg class="icon-copy">
-        <use href="./assets/svg/sprite.svg#copy"></use>
+
+<!-- <svg class="icon-password">
+        <use href="./assets/svg/sprite.svg#password-hide"></use>
     </svg> -->
 
 </svg>

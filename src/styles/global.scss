@@ -725,6 +725,256 @@ input:-webkit-autofill {
   }
 }
 
+.access {
+  position: relative;
+  z-index: 5;
+  overflow: hidden;
+
+  &::after {
+    content: url('../assets/img/access/bg.png');
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &::before {
+    content: '';
+    background-image: url('../assets/img/access/bg-img.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__inner {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.auth {
+  display: none;
+
+  &__input-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 33px;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.has-danger .form-control {
+      border: 1px solid #F14646;
+    }
+  }
+
+  &__label {
+    color: #000;
+    font-family: Futura;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0.6px;
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    width: 300px;
+    height: 38px;
+    border-radius: 3px;
+    border: 1px solid #6F55A6;
+    background: #FBFBFB;
+    outline: none;
+    color: #000;
+    font-family: Futura;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0.54px;
+    padding: 9px 15px;
+  }
+
+  input[type="password"] {
+    letter-spacing: -7px;
+  }
+
+  input[type="password"]::placeholder {
+    letter-spacing: 0.54px;
+  }
+
+  &__box {
+    margin-bottom: 40px;
+  }
+
+  &-btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .icon-password {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    fill: none;
+  }
+
+  &__password-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    fill: none;
+    background-image: url('../assets/img/password-hide.svg');
+    position: absolute;
+    bottom: 6px;
+    right: 15px;
+
+    &.active {
+      background-image: url('../assets/img/password-show.svg');
+    }
+
+  }
+
+  .pristine-error.text-help {
+    position: absolute;
+    bottom: -17px;
+    color: #F14646;
+    font-family: Futura PT;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0.42px;
+  }
+}
+
+.registr {
+  border-radius: 24px;
+  background: #FBFBFB;
+  box-shadow: 0px 0px 17px 0px rgba(111, 85, 166, 0.40);
+  padding: 30px 20px;
+
+  &__title {
+    color: #6F55A6;
+    font-family: Futura;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 120.5%;
+    margin-bottom: 32px;
+  }
+
+  &__label {
+    color: #000;
+    font-family: Futura;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0.54px;
+    margin-bottom: 5px;
+  }
+
+  &__input {
+    width: 259px;
+    height: 38px;
+    border-radius: 4px;
+    border: 1px solid #6F55A6;
+    background: #FBFBFB;
+    outline: none;
+    padding: 10px 15px;
+    color: #000;
+    font-family: Futura;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0.48px;
+  }
+
+  &__input-wrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+    position: relative;
+
+    &._captcha {
+      margin-bottom: 30px;
+    }
+
+    &.has-danger .form-control {
+      border: 1px solid #F14646;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__box {
+    margin-bottom: 15px;
+  }
+
+  &__password-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    fill: none;
+    background-image: url('../assets/img/password-hide.svg');
+    position: absolute;
+    bottom: 6px;
+    right: 20px;
+
+    &.active {
+      background-image: url('../assets/img/password-show.svg');
+    }
+
+  }
+
+  &__captcha-title {
+    color: #000;
+    font-family: Futura;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 110%;
+    letter-spacing: 0.54px;
+    max-width: 215px;
+    margin-bottom: 5px;
+  }
+
+  &__captcha {
+    margin-bottom: 15px;
+  }
+
+  .pristine-error.text-help {
+    position: absolute;
+    bottom: -20px;
+    color: #F14646;
+    font-family: Futura PT;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: 0.42px;
+  }
+}
+
 
 /* adaptive */
 @media screen and (max-width: 1349px) {

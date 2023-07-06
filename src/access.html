@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Авторизация</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/global.css" defer>
+</head>
+
+<body>
+  <main>
+    <section class="access">
+      <div class="container">
+        <div class="access__inner">
+          <div class="auth">
+            <form action="#1" class="auth__form" name="auth_form" novalidate="true" method="get">
+
+              <div class="auth__box">
+                <div class="auth__input-wrap form-group">
+                  <label for="auth-login" class="auth__label">Логин:</label>
+                  <input type="text" id="auth-login" name="auth_login" class="auth__input form-control"
+                    placeholder="Александр" required="" minlength="3" maxlength="12"
+                    data-pristine-required-message="Поле обязательное для заполнения">
+                </div>
+
+                <div class="auth__input-wrap form-group">
+                  <label for="auth-password" class="auth__label">Пароль:</label>
+                  <input type="password" id="auth-password" name="auth_password" class="auth__input form-control"
+                    placeholder="******" required="" data-pristine-required-message="Поле обязательное для заполнения"
+                    minlength="3" maxlength="12">
+                  <span class="auth__password-icon"></span>
+                </div>
+              </div>
+
+              <div class="auth-btns">
+                <button type="submit" class="btn-main auth-btn">Войти</button>
+                <button type="button" class="btn-main auth-btn">Регистрация</button>
+              </div>
+
+            </form>
+          </div>
+
+          <div class="registr">
+            <div class="registr__title">Регистрация</div>
+            <form action="#2" class="registr__form" name="registr_form" novalidate="true" method="get">
+
+              <div class="registr__box">
+                <div class="registr__input-wrap form-group">
+                  <label for="registr-login" class="registr__label">Логин (мин. 3 симовал):*</label>
+                  <input type="text" id="registr-login" name="registr_login" class="registr__input form-control"
+                    placeholder="Александр" required="" minlength="3" maxlength="12"
+                    data-pristine-required-message="Поле обязательное для заполнения">
+                </div>
+
+                <div class="registr__input-wrap form-group">
+                  <label for="registr-password" class="registr__label">Пароль:*</label>
+                  <input type="password" id="registr-password" name="registr_password" class="auth__input form-control"
+                    placeholder="******" required="" data-pristine-required-message="Поле обязательное для заполнения"
+                    minlength="3" maxlength="12">
+                  <span class="registr__password-icon"></span>
+                </div>
+
+                <div class="registr__input-wrap form-group">
+                  <label for="registr-confirm-password" class="registr__label">Подтверждение пороля:*</label>
+                  <input type="password" id="registr-confirm-password" name="registr_confirm_password"
+                    class="auth__input form-control" placeholder="******" required=""
+                    data-pristine-required-message="Поле обязательное для заполнения" minlength="3" maxlength="12">
+                  <span class="registr__password-icon"></span>
+                </div>
+
+                <div class="registr__input-wrap form-group">
+                  <label for="registr-email" class="registr__label">E-mail:*</label>
+                  <input type="email" id="registr-email" name="registr_email" class="registr__input form-control"
+                    placeholder="Alex@yandxe.ru" required=""
+                    data-pristine-required-message="Поле обязательное для заполнения">
+                </div>
+
+              </div>
+              <div class="registr__input-wrap _captcha form-group">
+                <div class="registr__captcha">
+                  <p class="registr__captcha-title">Защита от автоматической регистрации</p>
+                  <img src="./assets/img/access/captcha.png" alt="">
+                </div>
+                <label for="registr-captcha" class="registr__label">Введите слово на картинке:*</label>
+                <input type="text" id="registr-captcha" name="registr_captcha" class="registr__input form-control"
+                  required="" data-pristine-required-message="Не верное слово">
+              </div>
+
+              <button class="btn-main registr__btn">Регистрация</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script defer src="js/main.js"></script>
+  <script defer src="./assets/plugins/pristine/pristine.min.js"></script>
+</body>
+
+</html>
