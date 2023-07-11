@@ -12,117 +12,131 @@
 
 <body>
   <main>
-    <section class="change-data">
+    <section class="access _change">
       <div class="container">
-        <div class="change-data__content">
-          <div class="change-data__header">
-            <h1 class="sectinon-title">Изменить данные</h1>
-            <div class="personal__back">
-              <a href="javascript:void(0);" class="personal__back-link">
-                <svg class="icon-arrow">
-                  <use href="./assets/svg/sprite.svg#arrow"></use>
-                </svg>
-                Назад
-              </a>
+        <div class="change-data">
+          <div class="change-data__content">
+            <div class="change-data__header">
+              <h1 class="sectinon-title">Изменить данные</h1>
+              <div class="personal__back">
+                <a href="index.html" class="personal__back-link">
+                  <svg class="icon-arrow">
+                    <use href="./assets/svg/sprite.svg#arrow"></use>
+                  </svg>
+                  Назад
+                </a>
+              </div>
+
             </div>
 
+            <form action="#3" class="change-data__form" name="change_data_form" novalidate="true" method="post">
+              <div class="change-data__photo">
+                <div class="change-data__img" id="image-preview">
+                  <img src="./assets/img/index/no-photo.png" alt="Заглушка изображения">
+                </div>
+                <input class="photo-hidden" type="file" name="change_data_img" accept=".jpg, .jpeg, .png" id="files">
+                <div class="change-data__load">
+                  <p class="change-data__tip">Загрузить фото</p>
+                  <label class="photo-label" for="files">Загрузить</label>
+                </div>
+              </div>
+
+              <div class="change-data__box">
+
+                <div class="change-data__input-wrap form-group">
+                  <label for="change-data__surname" class="change-data__label">Фамилия</label>
+                  <input type="text" id="change-data__surname" name="change_data_surname"
+                    class="change-data__input form-control" required=""
+                    data-pristine-required-message="Поле обязательное для заполнения">
+                </div>
+
+                <div class="change-data__input-wrap form-group">
+                  <label for="change-data__name" class="change-data__label">Имя</label>
+                  <input type="text" id="change-data__name" name="change_data_name"
+                    class="change-data__input form-control" required=""
+                    data-pristine-required-message="Поле обязательное для заполнения">
+                </div>
+
+                <div class="change-data__input-wrap form-group">
+                  <label for="change-data__patronymic" class="change-data__label">Отчество</label>
+                  <input type="text" id="change-data__patronymic" name="change_data_patronymic"
+                    class="change-data__input form-control">
+                </div>
+
+                <div class="change-data__input-wrap form-group">
+                  <label for="change-data__firm" class="change-data__label">Фирма</label>
+                  <input type="text" id="change-data__firm" name="change_data_firm"
+                    class="change-data__input form-control" required=""
+                    data-pristine-required-message="Поле обязательное для заполнения">
+                </div>
+
+                <div class="change-data__input-wrap form-group">
+                  <label for="change-data__job-title" class="change-data__label">Должность</label>
+                  <input type="text" id="change-data__job-title" name="change_data_job_title"
+                    class="change-data__input form-control" required=""
+                    data-pristine-required-message="Поле обязательное для заполнения">
+                </div>
+
+                <div class="change-data__input-wrap form-group">
+                  <label for="change-data__tel" class="change-data__label">Телефон 1</label>
+                  <input type="tel" id="change-data__tel" name="change_data_tel" class="change-data__input form-control"
+                    required="" data-pristine-required-message="Поле обязательное для заполнения">
+                </div>
+
+                <div class="change-data__input-wrap form-group">
+                  <label for="change-data__tel2" class="change-data__label">Телефон 2</label>
+                  <input type="tel" id="change-data__tel2" name="change_data_tel2"
+                    class="change-data__input form-control">
+                </div>
+
+                <div class="change-data__input-wrap form-group">
+                  <label for="change-data__tel3" class="change-data__label">Телефон 3</label>
+                  <input type="tel" id="change-data__tel3" name="change_data_tel3"
+                    class="change-data__input form-control">
+                </div>
+
+                <div class="change-data__input-wrap form-group">
+                  <label for="change-data__email" class="change-data__label">Email 1</label>
+                  <input type="email" id="change-data__email" name="change_data_email"
+                    class="change-data__input form-control" required=""
+                    data-pristine-required-message="Поле обязательное для заполнения">
+                </div>
+
+                <div class="change-data__input-wrap form-group">
+                  <label for="change-data__email2" class="change-data__label">Email 2</label>
+                  <input type="email" id="change-data__email2" name="change_data_email2"
+                    class="change-data__input form-control">
+                </div>
+
+                <div class="change-data__input-wrap form-group">
+                  <label for="change-data__website" class="change-data__label">Сайт</label>
+                  <input type="url" id="change-data__website" name="change_data_website"
+                    class="change-data__input form-control">
+                </div>
+
+                <div class="change-data__input-wrap form-group">
+                  <label for="change-data__website2" class="change-data__label">Сайт2</label>
+                  <input type="url" id="change-data__website2" name="change_data_website2"
+                    class="change-data__input form-control">
+                </div>
+
+                <div class="change-data__input-wrap form-group">
+                  <label for="change-data__net" class="change-data__label">Соцсети</label>
+                  <input type="url" id="change-data__net" name="change_data_net"
+                    class="change-data__input form-control">
+                </div>
+
+                <div class="change-data__input-wrap form-group">
+                  <label for="change-data__address" class="change-data__label">Адрес</label>
+                  <input type="url" id="change-data__address" name="change_data_address"
+                    class="change-data__input form-control">
+                </div>
+
+              </div>
+
+              <button type="submit" class="change-data__btn btn-main">Обновить</button>
+            </form>
           </div>
-
-          <form action="#3" class="change-data__form" name="change_data_form" novalidate="true" method="get">
-            <div class="change-data__photo">
-              <div class="change-data__img" id="image-preview">
-                <img src="./assets/img/index/no-photo.png" alt="Заглушка изображения">
-              </div>
-              <input class="photo-hidden" type="file" name="change_data_img" accept=".jpg, .jpeg, .png" id="files">
-              <div class="change-data__load">
-                <p class="change-data__tip">Загрузить фото</p>
-                <label class="photo-label" for="files">Загрузить</label>
-              </div>
-            </div>
-
-            <div class="change-data__box">
-
-              <div class="change-data__input-wrap form-group">
-                <label for="change-data__surname" class="change-data__label">Фамилия</label>
-                <input type="text" id="change-data__surname" name="change_data_surname"
-                  class="change-data__input form-control" required=""
-                  data-pristine-required-message="Поле обязательное для заполнения">
-              </div>
-
-              <div class="change-data__input-wrap form-group">
-                <label for="change-data__name" class="change-data__label">Имя</label>
-                <input type="text" id="change-data__name" name="change_data_name"
-                  class="change-data__input form-control" required=""
-                  data-pristine-required-message="Поле обязательное для заполнения">
-              </div>
-
-              <div class="change-data__input-wrap form-group">
-                <label for="change-data__patronymic" class="change-data__label">Отчество</label>
-                <input type="text" id="change-data__patronymic" name="change_data_patronymic"
-                  class="change-data__input form-control">
-              </div>
-
-              <div class="change-data__input-wrap form-group">
-                <label for="change-data__firm" class="change-data__label">Фирма</label>
-                <input type="text" id="change-data__firm" name="change_data_firm"
-                  class="change-data__input form-control" required=""
-                  data-pristine-required-message="Поле обязательное для заполнения">
-              </div>
-
-              <div class="change-data__input-wrap form-group">
-                <label for="change-data__job-title" class="change-data__label">Должность</label>
-                <input type="text" id="change-data__job-title" name="change_data_job_title"
-                  class="change-data__input form-control" required=""
-                  data-pristine-required-message="Поле обязательное для заполнения">
-              </div>
-
-              <div class="change-data__input-wrap form-group">
-                <label for="change-data__address" class="change-data__label">Адрес</label>
-                <input type="url" id="change-data__address" name="change_data_address"
-                  class="change-data__input form-control">
-              </div>
-
-              <div class="change-data__input-wrap form-group">
-                <label for="change-data__tel" class="change-data__label">Телефон 1</label>
-                <input type="tel" id="change-data__tel" name="change_data_tel" class="change-data__input form-control"
-                  required="" data-pristine-required-message="Поле обязательное для заполнения">
-              </div>
-
-              <div class="change-data__input-wrap form-group">
-                <label for="change-data__tel2" class="change-data__label">Телефон 2</label>
-                <input type="tel" id="change-data__tel2" name="change_data_tel2"
-                  class="change-data__input form-control">
-              </div>
-
-              <div class="change-data__input-wrap form-group">
-                <label for="change-data__tel3" class="change-data__label">Телефон 3</label>
-                <input type="tel" id="change-data__tel3" name="change_data_tel3"
-                  class="change-data__input form-control">
-              </div>
-
-              <div class="change-data__input-wrap form-group">
-                <label for="change-data__email" class="change-data__label">Email 1</label>
-                <input type="email" id="change-data__email" name="change_data_email"
-                  class="change-data__input form-control" required=""
-                  data-pristine-required-message="Поле обязательное для заполнения">
-              </div>
-
-              <div class="change-data__input-wrap form-group">
-                <label for="change-data__email2" class="change-data__label">Email 2</label>
-                <input type="email" id="change-data__email2" name="change_data_email2"
-                  class="change-data__input form-control">
-              </div>
-
-              <div class="change-data__input-wrap form-group">
-                <label for="change-data__website" class="change-data__label">Сайт</label>
-                <input type="url" id="change-data__website" name="change_data_website"
-                  class="change-data__input form-control">
-              </div>
-
-            </div>
-
-            <button type="submit" class="change-data__btn btn-main">Обновить</button>
-          </form>
         </div>
       </div>
     </section>

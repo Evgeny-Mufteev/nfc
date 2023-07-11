@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   togglePassword('.auth__form');
   togglePassword('.registr__form');
 
-  // Валидация и отправка формы НЕ в модальном окне
+  // Валидация формы НЕ в модальном окне
   const handleFormSubmitPage = (formItem) => {
     const form = document.querySelector(formItem);
 
@@ -84,11 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
         evt.preventDefault();
         const valid = pristine.validate();
         if (valid) {
-          evt.preventDefault();
-
-          const formData = Object.fromEntries(new FormData(evt.target).entries());
-          console.log(formData);
-          // evt.target.submit()
+          const formData = new FormData(form);
+          if (form.querySelector('input[name="change_data_img"]')) {
+            const imageFile = form.querySelector('input[name="change_data_img"]').files[0];
+            formData.append('change_data_img', imageFile);
+          }
+          console.log(Object.fromEntries(formData.entries()));
+          // evt.target.submit();
         }
       });
     }
