@@ -89,7 +89,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const imageFile = form.querySelector('input[name="change_data_img"]').files[0];
             formData.append('change_data_img', imageFile);
           }
-          console.log(Object.fromEntries(formData.entries()));
+
+          // Создание новой FormData, исключая пустые строки
+          const filteredFormData = new FormData();
+          for (const [key, value] of formData.entries()) {
+            if (value !== '') {
+              filteredFormData.append(key, value);
+            }
+          }
+
+          console.log(Object.fromEntries(filteredFormData.entries()));
           // evt.target.submit();
         }
       });
@@ -162,4 +171,33 @@ document.addEventListener('DOMContentLoaded', () => {
     number.addEventListener('focus', handlePhoneMask.bind(null, number));
     number.addEventListener('blur', handlePhoneMask.bind(null, number));
   });
+
+  // добавлениие новых блоков перед кнопкой при клике на нее, но не более 10
+  const addButton = document.querySelector('.change-data__adding');
+  if (addButton) {
+    addButton.addEventListener('click', () => {
+      const blockCount = document.querySelectorAll('.js-net').length;
+      if (blockCount < 10) {
+        const newBlock = document.createElement('div');
+        newBlock.className = 'change-data__input-wrap form-group js-net';
+
+        const newLabel = document.createElement('label');
+        newLabel.htmlFor = 'change-data__net' + (blockCount + 1);
+        newLabel.className = 'change-data__label';
+        newLabel.textContent = 'Соцсеть';
+
+        const newInput = document.createElement('input');
+        newInput.type = 'url';
+        newInput.id = 'change-data__net' + (blockCount + 1);
+        newInput.name = 'change_data_net' + (blockCount + 1);
+        newInput.className = 'change-data__input form-control';
+
+        newBlock.appendChild(newLabel);
+        newBlock.appendChild(newInput);
+
+        const parentElement = addButton.parentNode;
+        parentElement.insertBefore(newBlock, addButton);
+      }
+    });
+  }
 });
