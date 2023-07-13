@@ -373,6 +373,7 @@ input:-webkit-autofill {
     line-height: 110%;
     letter-spacing: 0.6px;
     transition: var(--base-transition);
+    outline: none;
 
     &._transparent {
       background: #fff;
@@ -1011,6 +1012,15 @@ input:-webkit-autofill {
     line-height: 110%;
     letter-spacing: 0.42px;
   }
+
+  ._error {
+    position: absolute;
+    bottom: -35px;
+    font-size: 12px;
+    right: 0;
+    color: #F14646;
+  }
+
 }
 
 .notice {

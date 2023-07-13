@@ -73,6 +73,27 @@ document.addEventListener('DOMContentLoaded', () => {
   togglePassword('.auth__form');
   togglePassword('.registr__form');
 
+  // // отправка данных
+  // const sendData = (url, data) => {
+  //   fetch(url, {
+  //     method: 'POST',
+  //     body: data,
+  //   })
+  //     .then((response) => {
+  //       if (response.ok) {
+  //         return response.json();
+  //       } else {
+  //         throw new Error('Network response was not ok');
+  //       }
+  //     })
+  //     .then((jsonData) => {
+  //       console.log(jsonData);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
+
   // Валидация формы НЕ в модальном окне
   const handleFormSubmitPage = (formItem) => {
     const form = document.querySelector(formItem);
@@ -97,8 +118,10 @@ document.addEventListener('DOMContentLoaded', () => {
               filteredFormData.append(key, value);
             }
           }
+          // const url = 'http://example.com'; // Леша замени на наш URL для отправки данных
+          // sendData(url, filteredFormData);
 
-          console.log(Object.fromEntries(filteredFormData.entries()));
+          // console.log(Object.fromEntries(filteredFormData.entries()));
           // evt.target.submit();
         }
       });
@@ -200,4 +223,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Сравнение паролей
+  const checkingPassword = () => {
+    const form = document.querySelector('form[name="registr_form"]');
+    let errorBlock = null;
+
+    if (form && !errorBlock) {
+      const repeatPassword = form.querySelector('.js-repeat-password');
+      const passwordInput = form.querySelector('.js-password');
+
+      repeatPassword.addEventListener('input', (evt) => {
+        const password = passwordInput.value;
+        const repeatPasswordVal = evt.target.value;
+
+        if (password !== repeatPasswordVal) {
+          if (!repeatPasswordVal.previousElementSibling && !errorBlock) {
+            errorBlock = document.createElement('div');
+            errorBlock.classList.add('_error');
+            errorBlock.innerText = 'пароли не совпадают';
+            repeatPassword.parentNode.prepend(errorBlock);
+          }
+        } else {
+          if (errorBlock) {
+            errorBlock.remove();
+            errorBlock = null;
+          }
+        }
+      });
+    }
+  };
+  checkingPassword();
 });
